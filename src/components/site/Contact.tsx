@@ -42,20 +42,9 @@ export const Contact = () => {
           <ContactBlock icon={<MapPin size={16} />} label="Headquarters" value="Kanpur, India" sub="100 New Defence Colony, Jajmau, Kanpur-208010" />
         </div>
 
-        {/* Visiting card + Map */}
-        <div ref={mapRef} className="lg:col-span-5 flex flex-col gap-4">
-          {/* Visiting card */}
-          <div className="border border-background/15 overflow-hidden rounded-sm">
-            <img
-              src="/visiting-card.png"
-              alt="Equipet International — Aryan Singh, Managing Partner"
-              className="w-full h-auto"
-              loading="lazy"
-            />
-          </div>
-
-          {/* Map */}
-          <div className="aspect-[16/7] border border-background/10 relative overflow-hidden rounded-sm">
+        {/* Map */}
+        <div ref={mapRef} className="lg:col-span-5">
+          <div className="aspect-[16/9] border border-background/10 relative overflow-hidden rounded-sm">
             <iframe
               title="Equipet International Location"
               src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3572.5!2d80.4022!3d26.4291!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s26%C2%B025'44.8%22N+80%C2%B024'08.1%22E!5e0!3m2!1sen!2sin!4v1700000000000"
@@ -88,7 +77,7 @@ const ContactBlock = ({
   <div className="bg-foreground p-5">
     <div className="text-accent mb-3">{icon}</div>
     <div className="text-[10px] uppercase tracking-[0.28em] text-background/50 mb-1.5">{label}</div>
-    <div className="font-serif text-base text-background mb-1">{value}</div>
+    <div className="font-serif text-sm text-background mb-1 break-all">{value}</div>
     <div className="text-[11px] text-background/50 leading-snug">{sub}</div>
   </div>
 );

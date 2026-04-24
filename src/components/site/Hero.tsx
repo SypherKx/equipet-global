@@ -66,7 +66,7 @@ export const Hero = () => {
               </span>
               <span className="block w-12 h-px bg-background/30" />
             </div>
-            <img src="/logo.png" alt="Equipet International" className="h-16 md:h-20 w-auto rounded-sm" />
+            <img src="/logo.png" alt="Equipet International" className="h-28 md:h-36 w-auto rounded-sm" />
           </div>
         </div>
 

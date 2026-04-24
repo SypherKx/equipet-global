@@ -1,4 +1,4 @@
-import { ArrowUpRight, Download } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import rawhide from "@/assets/product-rawhide.jpg";
 import dental from "@/assets/product-dental.jpg";
 import treats from "@/assets/product-treats.jpg";
@@ -48,15 +48,14 @@ export const Products = () => {
               50+ products, built for the <em className="text-accent not-italic font-light">global shelf.</em>
             </h2>
             <p className="text-background/50 mt-4 max-w-lg text-sm leading-relaxed">
-              Here's a glimpse of our range. Download the full brochure to explore every product, specification and packaging option.
+              Here's a glimpse of our range. We manufacture over 50 products across multiple categories — get in touch to explore the full catalogue.
             </p>
           </div>
           <a
-            href="/brochure.pdf"
-            download
+            href="#contact"
             className="btn-outline-premium self-start md:self-end flex items-center gap-2"
           >
-            <Download size={14} /> Download Brochure
+            Contact Us <ArrowUpRight size={14} />
           </a>
         </div>
 
@@ -66,23 +65,21 @@ export const Products = () => {
           ))}
         </div>
 
-        {/* Download CTA */}
+        {/* CTA */}
         <div className="mt-16 border border-background/15 p-10 md:p-14 flex flex-col md:flex-row items-center justify-between gap-8">
           <div>
             <div className="font-serif text-2xl md:text-3xl text-background mb-2">
-              Explore our full product range
+              Looking for something specific?
             </div>
             <p className="text-background/50 text-sm max-w-md">
-              Our catalogue includes 50+ products across rawhide, dental chews, jerky, twisted bones, equestrian gear and more — with full specs, sizing and private-label options.
+              Our catalogue includes 50+ products across rawhide, dental chews, jerky, twisted bones, equestrian gear and more — with custom sizing and private-label options.
             </p>
           </div>
           <a
-            href="/brochure.pdf"
-            download
+            href="#contact"
             className="shrink-0 inline-flex items-center gap-3 bg-accent text-foreground px-8 py-4 text-[12px] uppercase tracking-[0.22em] font-medium hover:bg-accent/90 transition-colors duration-300"
           >
-            <Download size={16} />
-            Download Full Brochure
+            Contact Us
           </a>
         </div>
       </div>

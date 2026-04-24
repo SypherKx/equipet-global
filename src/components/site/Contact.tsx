@@ -37,9 +37,9 @@ export const Contact = () => {
       <div className="container-premium py-12 grid grid-cols-1 lg:grid-cols-12 gap-8">
         {/* Contact cards */}
         <div ref={cardRef} className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-px bg-background/10">
-          <ContactBlock icon={<Phone size={16} />} label="Telephone" value="07947120574" sub="Mon–Sat · 9:00–18:00 IST" />
-          <ContactBlock icon={<Mail size={16} />} label="Email" value="export@equipetinternational.com" sub="Distributor enquiries" />
-          <ContactBlock icon={<MapPin size={16} />} label="Headquarters" value="Kanpur, India" sub="100 New Defence Colony, Jajmau, Kanpur-208010" />
+          <ContactBlock icon={<Phone size={16} />} label="Telephone" value="07947120574" sub="Mon–Sat · 9:00–18:00 IST" href="tel:07947120574" />
+          <ContactBlock icon={<Mail size={16} />} label="Email" value="export@equipetinternational.com" sub="Distributor enquiries" href="mailto:export@equipetinternational.com" />
+          <ContactBlock icon={<MapPin size={16} />} label="Headquarters" value="Kanpur, India" sub="100 New Defence Colony, Jajmau, Kanpur-208010" href="https://www.google.com/maps?q=26.4291,80.4022" />
         </div>
 
         {/* Map */}
@@ -59,12 +59,8 @@ export const Contact = () => {
 
       {/* Footer bar */}
       <div className="border-t border-background/10">
-        <div className="container-premium py-5 flex flex-col md:flex-row items-center justify-between gap-3 text-[10px] uppercase tracking-[0.22em] text-background/50">
-          <div>© {new Date().getFullYear()} Equipet International · All rights reserved</div>
-          <div className="flex items-center gap-2">
-            <span className="block w-1.5 h-1.5 rounded-full bg-accent" />
-            Premium dog chews & treats — exported worldwide
-          </div>
+        <div className="container-premium py-5 text-center text-[10px] uppercase tracking-[0.22em] text-background/50">
+          © {new Date().getFullYear()} Equipet International · All rights reserved
         </div>
       </div>
     </section>
@@ -72,12 +68,12 @@ export const Contact = () => {
 };
 
 const ContactBlock = ({
-  icon, label, value, sub,
-}: { icon: React.ReactNode; label: string; value: string; sub: string }) => (
-  <div className="bg-foreground p-5">
+  icon, label, value, sub, href,
+}: { icon: React.ReactNode; label: string; value: string; sub: string; href: string }) => (
+  <a href={href} target={href.startsWith("http") ? "_blank" : undefined} rel={href.startsWith("http") ? "noopener noreferrer" : undefined} className="bg-foreground p-5 block hover:bg-background/5 transition-colors duration-300 cursor-pointer">
     <div className="text-accent mb-3">{icon}</div>
     <div className="text-[10px] uppercase tracking-[0.28em] text-background/50 mb-1.5">{label}</div>
     <div className="font-serif text-sm text-background mb-1 break-all">{value}</div>
     <div className="text-[11px] text-background/50 leading-snug">{sub}</div>
-  </div>
+  </a>
 );

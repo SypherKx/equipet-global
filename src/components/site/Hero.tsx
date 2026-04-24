@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import heroBg from "@/assets/hero-bg.jpg";
-import { ArrowDown, Download } from "lucide-react";
+import { ArrowDown } from "lucide-react";
 
 export const Hero = () => {
   const bgRef = useRef<HTMLDivElement>(null);
@@ -66,7 +66,11 @@ export const Hero = () => {
               </span>
               <span className="block w-12 h-px bg-background/30" />
             </div>
-            <img src="/logo.png" alt="Equipet International" className="h-28 md:h-36 w-auto rounded-sm" />
+            <div className="relative">
+              <div className="absolute -inset-3 rounded-full border border-background/20" />
+              <div className="absolute -inset-5 rounded-full border border-background/10" />
+              <img src="/logo.png" alt="Equipet International" className="h-28 md:h-36 w-28 md:w-36 object-cover rounded-full ring-2 ring-background/30" />
+            </div>
           </div>
         </div>
 
@@ -103,9 +107,6 @@ export const Hero = () => {
           style={{ animationDelay: "1.1s" }}
         >
           <a href="#contact" className="btn-premium bg-accent text-background hover:bg-accent/90">
-            <Download size={14} /> Download Brochure
-          </a>
-          <a href="#contact" className="btn-outline-premium">
             Contact Us
           </a>
         </div>

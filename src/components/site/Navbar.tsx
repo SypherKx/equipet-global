@@ -5,7 +5,6 @@ const links = [
   { href: "#about", label: "About" },
   { href: "#products", label: "Products" },
   { href: "#gallery", label: "Gallery" },
-  { href: "#contact", label: "Contact" },
 ];
 
 export const Navbar = () => {
@@ -33,7 +32,7 @@ export const Navbar = () => {
           <img
             src="/logo.png"
             alt="Equipet International"
-            className="h-10 md:h-12 w-auto rounded-sm"
+            className="h-10 md:h-12 w-10 md:w-12 object-cover rounded-full"
           />
         </a>
 
@@ -57,7 +56,7 @@ export const Navbar = () => {
                 : "border-background/30 text-background hover:bg-background hover:text-foreground"
             }`}
           >
-            Get Brochure
+            Contact Us
           </a>
         </nav>
 
@@ -93,7 +92,7 @@ export const Navbar = () => {
             onClick={() => setOpen(false)}
             className="btn-outline-dark self-start"
           >
-            Get Brochure
+            Contact Us
           </a>
         </div>
       </div>

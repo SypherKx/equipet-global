@@ -54,10 +54,10 @@ export const Hero = () => {
       {/* Content */}
       <div
         ref={contentRef}
-        className="relative z-10 container-premium min-h-screen flex flex-col items-center justify-center text-center pt-24 pb-20"
+        className="relative z-10 container-premium min-h-screen flex flex-col items-center justify-center text-center pt-16 pb-12 md:pt-24 md:pb-20"
       >
         {/* Brand mark */}
-        <div className="mb-10 animate-fade-in opacity-0" style={{ animationDelay: "0.1s" }}>
+        <div className="mb-6 md:mb-10 animate-fade-in opacity-0" style={{ animationDelay: "0.1s" }}>
           <div className="inline-flex flex-col items-center gap-3">
             <div className="flex items-center gap-3">
               <span className="block w-12 h-px bg-background/30" />
@@ -69,7 +69,7 @@ export const Hero = () => {
             <div className="relative">
               <div className="absolute -inset-3 rounded-full border border-background/20" />
               <div className="absolute -inset-5 rounded-full border border-background/10" />
-              <img src="/logo.png" alt="Equipet International" className="h-28 md:h-36 w-28 md:w-36 object-cover rounded-full ring-2 ring-background/30" />
+              <img src="/logo.png" alt="Equipet International" className="h-24 md:h-36 w-24 md:w-36 object-cover rounded-full ring-2 ring-background/30" />
             </div>
           </div>
         </div>

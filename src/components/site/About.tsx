@@ -13,7 +13,7 @@ export const About = () => {
     <section id="about" className="relative pt-16 pb-24 md:pt-20 md:pb-32 bg-background bg-paws">
       <div className="container-premium grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
         {/* Image side */}
-        <div ref={imgRef} className="lg:col-span-6 relative order-2 lg:order-1 pb-10 md:pb-0">
+        <div ref={imgRef} className="lg:col-span-6 relative order-2 lg:order-1 pb-10 md:pb-0 lg:pt-16">
           <div className="relative aspect-[4/5] overflow-hidden bg-navy-deep">
             <img
               src={factoryImg}

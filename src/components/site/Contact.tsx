@@ -219,14 +219,14 @@ export const Contact = () => {
           <div ref={cardRef} className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-background/10">
             <ContactBlock 
               icon={<Phone size={16} />} 
-              label="Mohammad Zaid Lari · Managing Partner" 
+              label="Contact" 
               value="+91 78006 46000" 
               sub="Sales@equipetinternational.com" 
               href="tel:+917800646000" 
             />
             <ContactBlock 
               icon={<Phone size={16} />} 
-              label="Usman Tariq · Managing Partner" 
+              label="Contact" 
               value="+91 92500 20072" 
               sub="Info@equipetinternational.com" 
               href="tel:+919250020072" 

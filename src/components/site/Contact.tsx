@@ -243,7 +243,7 @@ export const Contact = () => {
               label="Manufacturing Plant" 
               value="Kanpur, India" 
               sub="104/90-A, (20), Jajmau, Kanpur, Kanpur Nagar, Uttar Pradesh, 208010, India" 
-              href="https://www.google.com/maps?q=104/90-A+Jajmau+Kanpur" 
+              href="https://www.google.com/maps?q=26.421667,80.414333" 
             />
           </div>
 
@@ -252,7 +252,7 @@ export const Contact = () => {
             <div className="aspect-[16/9] border border-background/10 relative overflow-hidden rounded-sm">
               <iframe
                 title="Equipet International Location — Kanpur, India"
-                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3572.5!2d80.4022!3d26.4291!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s26%C2%B025'44.8%22N+80%C2%B024'08.1%22E!5e0!3m2!1sen!2sin!4v1700000000000"
+                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3572.5!2d80.414333!3d26.421667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s26%C2%B025'18.0%22N+80%C2%B024'51.6%22E!5e0!3m2!1sen!2sin!4v1700000000000"
                 className="absolute inset-0 w-full h-full border-0 grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-500"
                 allowFullScreen
                 loading="lazy"

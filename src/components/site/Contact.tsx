@@ -216,7 +216,7 @@ export const Contact = () => {
 
         {/* Contact cards + map */}
         <div className="lg:col-span-5 flex flex-col gap-6">
-          <div ref={cardRef} className="grid grid-cols-1 gap-px bg-background/10">
+          <div ref={cardRef} className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-background/10">
             <ContactBlock 
               icon={<Phone size={16} />} 
               label="Mohammad Zaid Lari · Managing Partner" 
@@ -276,7 +276,7 @@ export const Contact = () => {
 const ContactBlock = ({
   icon, label, value, sub, href,
 }: { icon: React.ReactNode; label: string; value: string; sub: string; href: string }) => (
-  <a href={href} target={href.startsWith("http") ? "_blank" : undefined} rel={href.startsWith("http") ? "noopener noreferrer" : undefined} className="bg-foreground p-5 block hover:bg-background/5 transition-colors duration-300 cursor-pointer">
+  <a href={href} target={href.startsWith("http") ? "_blank" : undefined} rel={href.startsWith("http") ? "noopener noreferrer" : undefined} className="bg-foreground p-8 block hover:bg-background/5 transition-colors duration-300 cursor-pointer h-full">
     <div className="text-accent mb-3">{icon}</div>
     <div className="text-[11px] uppercase tracking-[0.28em] text-background/50 mb-2">{label}</div>
     <div className="font-serif text-lg text-background mb-1 break-all">{value}</div>

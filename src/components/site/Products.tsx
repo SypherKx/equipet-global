@@ -94,7 +94,7 @@ const ProductCard = ({
 }) => {
   const ref = useReveal<HTMLDivElement>({ delay });
   return (
-    <div ref={ref} className="group relative bg-foreground p-4 md:p-10 overflow-hidden flex flex-col justify-center">
+    <div ref={ref} className="group relative bg-foreground bg-paws-dark p-4 md:p-10 overflow-hidden flex flex-col justify-center">
       <div className="flex flex-col xl:grid xl:grid-cols-12 gap-4 xl:gap-6 items-center">
         <div className="w-full xl:col-span-5 relative aspect-square overflow-hidden bg-navy-deep">
           <img

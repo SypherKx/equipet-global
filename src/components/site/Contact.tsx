@@ -82,11 +82,11 @@ export const Contact = () => {
             Request our distributor brochure, sample kits, or speak directly with our export team.
           </p>
           <a
-            href="mailto:Info@equipetinternational.com"
-            className="inline-flex items-center gap-3 mt-6 text-sm uppercase tracking-[0.22em] border-b border-accent pb-2 group"
+            href="mailto:info@equipetinternational.com"
+            className="inline-flex items-center gap-3 mt-6 text-[12px] tracking-[0.18em] border-b border-accent pb-1.5 group"
           >
-            Info@equipetinternational.com
-            <ArrowRight size={14} className="transition-transform duration-500 group-hover:translate-x-1" />
+            info@equipetinternational.com
+            <ArrowRight size={12} className="transition-transform duration-500 group-hover:translate-x-1" />
           </a>
         </div>
       </div>

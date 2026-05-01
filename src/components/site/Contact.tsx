@@ -4,13 +4,11 @@ import { useReveal } from "@/hooks/use-reveal";
 
 interface FormState {
   name: string;
-  company: string;
-  country: string;
   email: string;
   message: string;
 }
 
-const INITIAL: FormState = { name: "", company: "", country: "", email: "", message: "" };
+const INITIAL: FormState = { name: "", email: "", message: "" };
 
 export const Contact = () => {
   const headRef = useReveal<HTMLDivElement>();
@@ -132,20 +130,6 @@ export const Contact = () => {
                 />
               </div>
 
-              <div className="flex flex-col gap-1.5">
-                <label htmlFor="company" className="text-[10px] uppercase tracking-[0.28em] text-background/50">
-                  Company / Business
-                </label>
-                <input
-                  id="company"
-                  name="company"
-                  type="text"
-                  value={form.company}
-                  onChange={handleChange}
-                  placeholder="Your company name"
-                  className="bg-background/5 border border-background/15 focus:border-accent outline-none px-4 py-3 text-sm text-background placeholder:text-background/30 transition-colors duration-300"
-                />
-              </div>
 
               <div className="flex flex-col gap-1.5">
                 <label htmlFor="email" className="text-[10px] uppercase tracking-[0.28em] text-background/50">
@@ -163,20 +147,6 @@ export const Contact = () => {
                 />
               </div>
 
-              <div className="flex flex-col gap-1.5">
-                <label htmlFor="country" className="text-[10px] uppercase tracking-[0.28em] text-background/50">
-                  Country
-                </label>
-                <input
-                  id="country"
-                  name="country"
-                  type="text"
-                  value={form.country}
-                  onChange={handleChange}
-                  placeholder="Your country"
-                  className="bg-background/5 border border-background/15 focus:border-accent outline-none px-4 py-3 text-sm text-background placeholder:text-background/30 transition-colors duration-300"
-                />
-              </div>
 
               <div className="flex flex-col gap-1.5 sm:col-span-2">
                 <label htmlFor="message" className="text-[10px] uppercase tracking-[0.28em] text-background/50">

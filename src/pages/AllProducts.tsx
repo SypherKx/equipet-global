@@ -35,7 +35,7 @@ export default function AllProducts() {
     <main className="relative bg-background text-foreground min-h-screen">
       <Navbar />
       
-      <section className="relative pt-20 pb-16 md:pt-32 md:pb-24 bg-foreground text-background overflow-hidden min-h-[60vh]">
+      <section className="relative pt-20 pb-16 md:pt-32 md:pb-24 bg-foreground text-background overflow-hidden min-h-[60vh] bg-paws-dark">
         <div className="absolute inset-0 diagonal-texture pointer-events-none" />
         
         <div className="container-premium relative">
@@ -51,7 +51,7 @@ export default function AllProducts() {
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-px bg-background/10">
             {allProducts.map((p, i) => (
-              <div key={i} className="group relative bg-foreground p-4 md:p-8 overflow-hidden flex flex-col">
+              <div key={i} className="group relative bg-foreground bg-paws-dark p-4 md:p-8 overflow-hidden flex flex-col">
                 <div className="relative aspect-square overflow-hidden bg-navy-deep mb-4 md:mb-6">
                   <img
                     src={p.img}

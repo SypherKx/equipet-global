@@ -233,10 +233,17 @@ export const Contact = () => {
             />
             <ContactBlock 
               icon={<MapPin size={16} />} 
-              label="Headquarters" 
+              label="Head Office" 
               value="Kanpur, India" 
-              sub="100 New Defence Colony, Jajmau, Kanpur-208010" 
-              href="https://www.google.com/maps?q=26.4291,80.4022" 
+              sub="F-201 The Residency Apartment, Kailash Nagar, Jajmau, Kanpur-208010, U.P. India" 
+              href="https://www.google.com/maps?q=F-201+The+Residency+Apartment+Kailash+Nagar+Jajmau+Kanpur" 
+            />
+            <ContactBlock 
+              icon={<MapPin size={16} />} 
+              label="Manufacturing Plant" 
+              value="Kanpur, India" 
+              sub="104/90-A, (20), Jajmau, Kanpur, Kanpur Nagar, Uttar Pradesh, 208010, India" 
+              href="https://www.google.com/maps?q=104/90-A+Jajmau+Kanpur" 
             />
           </div>
 

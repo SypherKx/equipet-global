@@ -10,7 +10,7 @@ export const About = () => {
   const imgRef = useReveal<HTMLDivElement>({ delay: 100 });
 
   return (
-    <section id="about" className="relative pt-16 pb-24 md:pt-20 md:pb-32 bg-background">
+    <section id="about" className="relative pt-16 pb-24 md:pt-20 md:pb-32 bg-background bg-paws">
       <div className="container-premium grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
         {/* Image side */}
         <div ref={imgRef} className="lg:col-span-6 relative order-2 lg:order-1 pb-10 md:pb-0">

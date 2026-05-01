@@ -52,6 +52,7 @@ export const Hero = () => {
       {/* Gradient overlays */}
       <div className="absolute inset-0 bg-gradient-navy-radial opacity-95" />
       <div className="absolute inset-0 diagonal-texture" />
+      <div className="absolute inset-0 bg-paws-dark opacity-40 pointer-events-none" />
       <div className="absolute inset-0 bg-gradient-to-b from-navy-deep/30 via-transparent to-navy-deep" />
 
       {/* Subtle glow accents */}

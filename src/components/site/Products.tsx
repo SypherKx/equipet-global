@@ -36,7 +36,7 @@ const products = [
 export const Products = () => {
   const headRef = useReveal<HTMLDivElement>();
   return (
-    <section id="products" className="relative py-16 md:py-24 bg-foreground text-background overflow-hidden">
+    <section id="products" className="relative py-16 md:py-24 bg-foreground text-background overflow-hidden bg-paws-dark">
       {/* Subtle texture */}
       <div className="absolute inset-0 diagonal-texture pointer-events-none" />
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[60%] h-px bg-gradient-to-r from-transparent via-accent/40 to-transparent" />

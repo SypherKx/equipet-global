@@ -70,7 +70,7 @@ export const Contact = () => {
   };
 
   return (
-    <section id="contact" className="relative bg-foreground text-background overflow-hidden">
+    <section id="contact" className="relative bg-foreground text-background overflow-hidden bg-paws-dark">
       {/* Top CTA band */}
       <div className="container-premium pt-16 md:pt-20 pb-8 md:pb-10">
         <div ref={headRef} className="max-w-4xl">

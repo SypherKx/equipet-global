@@ -34,7 +34,7 @@ export const Gallery = () => {
   }, []);
 
   return (
-    <section id="gallery" className="relative py-16 md:py-24 bg-background">
+    <section id="gallery" className="relative py-16 md:py-24 bg-background bg-paws">
       <div className="container-premium">
         <div ref={headRef} className="max-w-2xl mb-16">
           <div className="eyebrow mb-5">Inside the Operation</div>

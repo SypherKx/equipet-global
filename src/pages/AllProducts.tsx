@@ -49,7 +49,7 @@ export default function AllProducts() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-px bg-background/10">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-px bg-background/10">
             {allProducts.map((p, i) => (
               <div key={i} className="group relative bg-foreground bg-paws-dark p-4 md:p-8 overflow-hidden flex flex-col">
                 <div className="relative aspect-square overflow-hidden bg-navy-deep mb-4 md:mb-6">

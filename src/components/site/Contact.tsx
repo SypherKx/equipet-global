@@ -217,9 +217,27 @@ export const Contact = () => {
         {/* Contact cards + map */}
         <div className="lg:col-span-5 flex flex-col gap-6">
           <div ref={cardRef} className="grid grid-cols-1 gap-px bg-background/10">
-            <ContactBlock icon={<Phone size={16} />} label="Telephone" value="+91 79471 20574" sub="Mon–Sat · 9:00–18:00 IST" href="tel:+917947120574" />
-            <ContactBlock icon={<Mail size={16} />} label="Email" value="export@equipetinternational.com" sub="Distributor enquiries" href="mailto:export@equipetinternational.com" />
-            <ContactBlock icon={<MapPin size={16} />} label="Headquarters" value="Kanpur, India" sub="100 New Defence Colony, Jajmau, Kanpur-208010" href="https://www.google.com/maps?q=26.4291,80.4022" />
+            <ContactBlock 
+              icon={<Phone size={16} />} 
+              label="Mohammad Zaid Lari · Managing Partner" 
+              value="+91 78006 46000" 
+              sub="Sales@equipetinternational.com" 
+              href="tel:+917800646000" 
+            />
+            <ContactBlock 
+              icon={<Phone size={16} />} 
+              label="Usman Tariq · Managing Partner" 
+              value="+91 92500 20072" 
+              sub="Info@equipetinternational.com" 
+              href="tel:+919250020072" 
+            />
+            <ContactBlock 
+              icon={<MapPin size={16} />} 
+              label="Headquarters" 
+              value="Kanpur, India" 
+              sub="100 New Defence Colony, Jajmau, Kanpur-208010" 
+              href="https://www.google.com/maps?q=26.4291,80.4022" 
+            />
           </div>
 
           {/* Map */}

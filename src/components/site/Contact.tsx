@@ -278,8 +278,8 @@ const ContactBlock = ({
 }: { icon: React.ReactNode; label: string; value: string; sub: string; href: string }) => (
   <a href={href} target={href.startsWith("http") ? "_blank" : undefined} rel={href.startsWith("http") ? "noopener noreferrer" : undefined} className="bg-foreground p-8 block hover:bg-background/5 transition-colors duration-300 cursor-pointer h-full">
     <div className="text-accent mb-3">{icon}</div>
-    <div className="text-[10px] uppercase tracking-[0.18em] text-background/50 mb-2 truncate">{label}</div>
-    <div className="font-serif text-lg text-background mb-1 break-all">{value}</div>
-    <div className="text-[13px] text-background/60 leading-relaxed">{sub}</div>
+    <div className="text-[9px] md:text-[10px] uppercase tracking-[0.15em] text-background/50 mb-2">{label}</div>
+    <div className="font-serif text-base md:text-lg text-background mb-1 break-all">{value}</div>
+    <div className="text-[11px] md:text-[12px] text-background/60 leading-relaxed break-all">{sub}</div>
   </a>
 );

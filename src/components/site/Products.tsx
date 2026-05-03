@@ -1,35 +1,36 @@
 import { Link } from "react-router-dom";
 import { ArrowUpRight, Download } from "lucide-react";
-import rawhide from "@/assets/product-rawhide.jpg";
-import dental from "@/assets/product-dental.jpg";
-import treats from "@/assets/product-treats.jpg";
-import bones from "@/assets/product-bones.jpg";
 import { useReveal } from "@/hooks/use-reveal";
+
+import img01 from "@/products/WhatsApp Image 2026-05-03 at 15.26.25.jpeg";
+import img05 from "@/products/WhatsApp Image 2026-05-03 at 15.26.27.jpeg";
+import img14 from "@/products/WhatsApp Image 2026-05-03 at 15.26.33.jpeg";
+import img25 from "@/products/WhatsApp Image 2026-05-03 at 15.26.38 (1).jpeg";
 
 const products = [
   {
     no: "01",
-    title: "Natural Rawhide",
-    desc: "Hand-rolled rawhide bones, sticks and pressed varieties — the global staple of the dog-chew category.",
-    img: rawhide,
+    title: "Tripe",
+    desc: "Premium dried tripe — a natural, nutrient-rich chew loved by dogs worldwide.",
+    img: img01,
   },
   {
     no: "02",
-    title: "Dental Chews",
-    desc: "Functional chews engineered for plaque control and oral health, available in extruded and baked formats.",
-    img: dental,
+    title: "Pizzle",
+    desc: "High-protein bully sticks, slow-dried for long-lasting chewing satisfaction.",
+    img: img05,
   },
   {
     no: "03",
-    title: "Meat Treats & Jerky",
-    desc: "Slow-dried protein strips, chicken and beef jerky lines — a premium tier for the discerning pet shelf.",
-    img: treats,
+    title: "Tendon",
+    desc: "Natural beef tendon sticks — a healthy, easily digestible chew for all breeds.",
+    img: img14,
   },
   {
     no: "04",
-    title: "Twisted & Knotted",
-    desc: "Twisted sticks, knotted bones and braided rolls in custom sizes for private-label distribution.",
-    img: bones,
+    title: "Braided Skin",
+    desc: "Braided rawhide-free skin chews in custom sizes for private-label distribution.",
+    img: img25,
   },
 ];
 
@@ -46,10 +47,10 @@ export const Products = () => {
           <div>
             <div className="eyebrow mb-5 text-background/60">Product Catalogue</div>
             <h2 className="heading-display text-background text-[clamp(2rem,5vw,3.75rem)] max-w-2xl text-balance">
-              50+ products, built for the <em className="text-accent not-italic font-light">global shelf.</em>
+              32+ products, built for the <em className="text-accent not-italic font-light">global shelf.</em>
             </h2>
             <p className="text-background/50 mt-4 max-w-lg text-sm leading-relaxed">
-              Here's a glimpse of our range. We manufacture over 50 products across multiple categories — get in touch to explore the full catalogue.
+              Here's a glimpse of our range. We manufacture over 32 products across multiple categories — get in touch to explore the full catalogue.
             </p>
           </div>
           <Link

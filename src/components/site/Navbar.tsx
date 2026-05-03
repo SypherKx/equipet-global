@@ -29,7 +29,7 @@ export const Navbar = () => {
       return;
     }
 
-    const sectionIds = ["about", "products", "gallery", "contact"];
+    const sectionIds = ["hero", "about", "products", "gallery", "contact"];
     const observers: IntersectionObserver[] = [];
 
     sectionIds.forEach((id) => {
@@ -37,9 +37,11 @@ export const Navbar = () => {
       if (!el) return;
       const obs = new IntersectionObserver(
         ([entry]) => {
-          if (entry.isIntersecting) setActive(`#${id}`);
+          if (entry.isIntersecting) {
+            setActive(id === "hero" ? "" : `#${id}`);
+          }
         },
-        { threshold: 0.35 }
+        { threshold: 0.3 }
       );
       obs.observe(el);
       observers.push(obs);

@@ -5,18 +5,18 @@ import { useEffect } from "react";
 
 const certifications = [
   { 
-    title: "ISO Certification", 
-    src: "/certifications/certification-1.pdf", 
-    desc: "International standard for quality management systems." 
+    title: "CAPEXIL Certification", 
+    src: "/certifications/certification-1.png", 
+    desc: "Chemical and Allied Products Export Promotion Council (CAPEXIL) membership." 
   },
   { 
     title: "HACCP Certification", 
-    src: "/certifications/haccp-certification.pdf", 
+    src: "/certifications/haccp-certification.png", 
     desc: "Hazard Analysis and Critical Control Points for food safety." 
   },
   { 
     title: "IEC Certification", 
-    src: "/certifications/iec-certification.pdf", 
+    src: "/certifications/iec-certification.png", 
     desc: "Import Export Code issued by the Directorate General of Foreign Trade." 
   },
 ];
@@ -77,21 +77,15 @@ const CertificationCard = ({ title, src, desc, index }: { title: string; src: st
   return (
     <div ref={ref} className="group flex flex-col items-center text-center p-6 bg-white border border-foreground/5 shadow-sm hover:shadow-elegant transition-all duration-700">
       <div className="w-full aspect-[1/1.414] bg-foreground/5 mb-8 overflow-hidden border border-foreground/10 relative">
-        <iframe 
-          src={`${src}#page=1&toolbar=0&navpanes=0&scrollbar=0`}
-          className="w-full h-full border-0 pointer-events-none"
-          title={title}
-        />
-        <a 
-          href={src} 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          className="absolute inset-0 z-10 bg-transparent"
-          aria-label={`View ${title} PDF`}
+        <img 
+          src={src}
+          className="w-full h-full object-contain p-2"
+          alt={title}
+          loading="lazy"
         />
       </div>
       <h3 className="font-serif text-xl text-foreground mb-3">{title}</h3>
-      <p className="text-foreground/60 text-sm leading-relaxed mb-6">
+      <p className="text-foreground/60 text-sm leading-relaxed">
         {desc}
       </p>
     </div>

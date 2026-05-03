@@ -21,33 +21,15 @@ export const Navbar = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // IntersectionObserver for active section highlighting
+  // Set active state on mount based on path
   useEffect(() => {
     const isHome = window.location.pathname === "/";
     if (!isHome) {
       setActive(window.location.pathname);
-      return;
+    } else {
+      // If on home page, set active to the current hash if it exists
+      setActive(window.location.hash || "");
     }
-
-    const sectionIds = ["hero", "about", "products", "gallery", "contact"];
-    const observers: IntersectionObserver[] = [];
-
-    sectionIds.forEach((id) => {
-      const el = document.getElementById(id);
-      if (!el) return;
-      const obs = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) {
-            setActive(id === "hero" ? "" : `#${id}`);
-          }
-        },
-        { threshold: 0.3 }
-      );
-      obs.observe(el);
-      observers.push(obs);
-    });
-
-    return () => observers.forEach((o) => o.disconnect());
   }, []);
 
   return (
@@ -81,6 +63,7 @@ export const Navbar = () => {
               <a
                 key={l.href}
                 href={targetHref}
+                onClick={() => setActive(l.href)}
                 className={`underline-grow text-[12px] uppercase tracking-[0.22em] font-medium transition-colors duration-500 ${
                   scrolled
                     ? isActive
@@ -97,6 +80,7 @@ export const Navbar = () => {
           })}
           <a
             href={window.location.pathname === "/" ? "#contact" : "/#contact"}
+            onClick={() => setActive("#contact")}
             className={`text-[11px] uppercase tracking-[0.22em] font-medium px-5 py-2.5 border transition-all duration-500 ${
               scrolled
                 ? active === "#contact"
@@ -140,7 +124,10 @@ export const Navbar = () => {
               <a
                 key={l.href}
                 href={targetHref}
-                onClick={() => setOpen(false)}
+                onClick={() => {
+                  setActive(l.href);
+                  setOpen(false);
+                }}
                 className={`text-sm uppercase tracking-[0.22em] py-2 border-b border-foreground/5 ${
                   isActive ? "text-accent font-medium is-active" : "text-foreground/80 hover:text-foreground"
                 }`}

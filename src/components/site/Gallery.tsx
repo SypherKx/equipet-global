@@ -34,9 +34,9 @@ export const Gallery = () => {
     <section id="gallery" className="relative py-16 md:py-24 bg-background bg-paws">
       <div className="container-premium">
         <div ref={headRef} className="max-w-2xl mb-16">
-          <div className="eyebrow mb-5">Inside the Operation</div>
+          <div className="eyebrow mb-5">Inside Our Manufacturing Excellence</div>
           <h2 className="heading-display text-foreground text-[clamp(2rem,5vw,3.75rem)] text-balance">
-            From factory floor to <em className="text-accent not-italic font-light">freight forwarders.</em>
+            Where precision craftsmanship meets international quality standards  <em className="text-accent not-italic font-light"> built for consistency, hygiene, and scale.</em>
           </h2>
         </div>
 

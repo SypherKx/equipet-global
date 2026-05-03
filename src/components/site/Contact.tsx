@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { Mail, MapPin, Phone, ArrowRight, CheckCircle, Loader2 } from "lucide-react";
 import { useReveal } from "@/hooks/use-reveal";
 
@@ -24,33 +24,22 @@ export const Contact = () => {
     setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setSending(true);
 
     try {
-      const payload = {
-        access_key: "5399cb78-7c6d-40cc-abde-f06057fb5ac6",
-        ...form,
-        from_name: "Equipet Global Website",
-        reply_to: form.email,
-        subject: `New Enquiry from ${form.company || form.name}`,
-      };
+      const formData = new FormData(e.currentTarget);
+      formData.append("access_key", "2948a7bf-c138-4322-b70f-f27df7e32056");
+      formData.append("from_name", "Equipet Global Website");
+      formData.append("subject", `New Enquiry from ${form.name}`);
 
-      console.log("Submitting form to Web3Forms...", payload);
-
-      // Using Web3Forms API as requested
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify(payload),
+        body: formData,
       });
 
       const result = await response.json();
-      console.log("Web3Forms Response:", result);
 
       if (result.success) {
         setSent(true);

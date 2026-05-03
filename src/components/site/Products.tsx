@@ -47,10 +47,10 @@ export const Products = () => {
           <div>
             <div className="eyebrow mb-5 text-background/60">Product Catalogue</div>
             <h2 className="heading-display text-background text-[clamp(2rem,5vw,3.75rem)] max-w-2xl text-balance">
-              32+ products, built for the <em className="text-accent not-italic font-light">global shelf.</em>
+              Products, built for the <em className="text-accent not-italic font-light">global shelf.</em>
             </h2>
             <p className="text-background/50 mt-4 max-w-lg text-sm leading-relaxed">
-              Here's a glimpse of our range. We manufacture over 32 products across multiple categories — get in touch to explore the full catalogue.
+              Here's a glimpse of our range. We manufactur Products across multiple categories — get in touch to explore the full catalogue.
             </p>
           </div>
           <Link

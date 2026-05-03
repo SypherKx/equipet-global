@@ -34,11 +34,10 @@ export const Navbar = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${
-        scrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${scrolled
           ? "bg-background/90 backdrop-blur-md shadow-[0_4px_24px_hsl(218_65%_12%/0.12)] py-3"
           : "bg-transparent py-6"
-      }`}
+        }`}
       style={{ transitionTimingFunction: "var(--ease-premium)" }}
     >
       <div className="container-premium flex items-center justify-between">
@@ -55,7 +54,7 @@ export const Navbar = () => {
             const isHome = window.location.pathname === "/";
             // Hide Home link if already on home page
             if (l.label === "Home" && isHome) return null;
-            
+
             const targetHref = l.href.startsWith("/") ? l.href : (isHome ? l.href : `/${l.href}`);
             const isActive = active === l.href || active === targetHref;
 
@@ -64,15 +63,14 @@ export const Navbar = () => {
                 key={l.href}
                 href={targetHref}
                 onClick={() => setActive(l.href)}
-                className={`underline-grow text-[12px] uppercase tracking-[0.22em] font-medium transition-colors duration-500 ${
-                  scrolled
+                className={`underline-grow text-[12px] uppercase tracking-[0.22em] font-medium transition-colors duration-500 ${scrolled
                     ? isActive
                       ? "text-foreground"
                       : "text-foreground/60 hover:text-foreground"
                     : isActive
-                    ? "text-background"
-                    : "text-background/70 hover:text-background"
-                } ${isActive ? "is-active" : ""}`}
+                      ? "text-background"
+                      : "text-background/70 hover:text-background"
+                  } ${isActive ? "is-active" : ""}`}
               >
                 {l.label}
               </a>
@@ -81,15 +79,14 @@ export const Navbar = () => {
           <a
             href={window.location.pathname === "/" ? "#contact" : "/#contact"}
             onClick={() => setActive("#contact")}
-            className={`text-[11px] uppercase tracking-[0.22em] font-medium px-5 py-2.5 border transition-all duration-500 ${
-              scrolled
+            className={`text-[11px] uppercase tracking-[0.22em] font-medium px-5 py-2.5 border transition-all duration-500 ${scrolled
                 ? active === "#contact"
                   ? "bg-foreground text-background border-foreground"
                   : "border-foreground/20 text-foreground hover:bg-foreground hover:text-background"
                 : active === "#contact"
-                ? "bg-background text-foreground border-background"
-                : "border-background/30 text-background hover:bg-background hover:text-foreground"
-            }`}
+                  ? "bg-background text-foreground border-background"
+                  : "border-background/30 text-background hover:bg-background hover:text-foreground"
+              }`}
           >
             Contact Us
           </a>
@@ -106,9 +103,8 @@ export const Navbar = () => {
 
       {/* Mobile menu */}
       <div
-        className={`md:hidden overflow-hidden transition-all duration-500 absolute w-full left-0 bg-background shadow-xl ${
-          open ? "max-h-96 opacity-100 border-b border-foreground/10" : "max-h-0 opacity-0"
-        }`}
+        className={`md:hidden overflow-hidden transition-all duration-500 absolute w-full left-0 bg-background shadow-xl ${open ? "max-h-96 opacity-100 border-b border-foreground/10" : "max-h-0 opacity-0"
+          }`}
         style={{ transitionTimingFunction: "var(--ease-premium)" }}
       >
         <div className="container-premium py-8 flex flex-col gap-5 border-t border-foreground/10 mt-3">
@@ -128,9 +124,8 @@ export const Navbar = () => {
                   setActive(l.href);
                   setOpen(false);
                 }}
-                className={`text-sm uppercase tracking-[0.22em] py-2 border-b border-foreground/5 ${
-                  isActive ? "text-accent font-medium is-active" : "text-foreground/80 hover:text-foreground"
-                }`}
+                className={`text-sm uppercase tracking-[0.22em] py-2 border-b border-foreground/5 ${isActive ? "text-accent font-medium is-active" : "text-foreground/80 hover:text-foreground"
+                  }`}
               >
                 {l.label}
               </a>

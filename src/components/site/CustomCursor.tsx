@@ -15,7 +15,7 @@ export const CustomCursor = () => {
         // Direct update for zero lag
         cursorRef.current.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0) translate(-50%, -50%) scale(${isPointer ? 1.5 : 1})`;
       }
-      
+
       const target = e.target as HTMLElement;
       setIsPointer(window.getComputedStyle(target).cursor === "pointer");
     };
@@ -35,9 +35,9 @@ export const CustomCursor = () => {
         transition: "transform 0.1s ease-out", // Very short transition only for the SCALE effect
       }}
     >
-      <PawPrint 
-        size={24} 
-        className="text-accent" 
+      <PawPrint
+        size={24}
+        className="text-accent"
         strokeWidth={1.5}
         style={{ transform: "scaleX(-1)" }}
       />

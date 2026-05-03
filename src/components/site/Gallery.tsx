@@ -1,11 +1,5 @@
 import { useEffect, useState } from "react";
 import { X } from "lucide-react";
-import warehouse from "@/assets/gallery-warehouse.jpg";
-import quality from "@/assets/gallery-quality.jpg";
-import packaging from "@/assets/gallery-packaging.jpg";
-import exportImg from "@/assets/gallery-export.jpg";
-import factory from "@/assets/about-factory.jpg";
-import rawhide from "@/assets/product-rawhide.jpg";
 import { useReveal } from "@/hooks/use-reveal";
 
 interface GalleryItem {
@@ -15,12 +9,15 @@ interface GalleryItem {
 }
 
 const items: GalleryItem[] = [
-  { src: warehouse, alt: "Warehouse & cold storage facility", h: "row-span-2" },
-  { src: quality, alt: "Quality control inspection process", h: "" },
-  { src: factory, alt: "Production line at Kanpur facility", h: "" },
-  { src: packaging, alt: "Export-grade packaging operations", h: "" },
-  { src: exportImg, alt: "Container loading for global export", h: "row-span-2" },
-  { src: rawhide, alt: "Natural rawhide chew product detail", h: "" },
+  { src: "/gallery/gallery-1.jpg", alt: "Premium product showcase", h: "row-span-2" },
+  { src: "/gallery/gallery-2.jpg", alt: "Manufacturing process detail", h: "" },
+  { src: "/gallery/gallery-3.jpg", alt: "Quality assurance inspection", h: "" },
+  { src: "/gallery/gallery-4.jpg", alt: "Export-ready packaging", h: "row-span-2" },
+  { src: "/gallery/gallery-5.jpg", alt: "Production facility overview", h: "" },
+  { src: "/gallery/gallery-6.jpg", alt: "Natural ingredient sourcing", h: "" },
+  { src: "/gallery/gallery-7.jpg", alt: "Bulk storage & logistics", h: "row-span-2" },
+  { src: "/gallery/gallery-8.jpg", alt: "International shipping preparation", h: "" },
+  { src: "/gallery/gallery-9.jpg", alt: "Final product distribution", h: "" },
 ];
 
 export const Gallery = () => {

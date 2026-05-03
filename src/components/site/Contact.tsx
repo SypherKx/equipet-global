@@ -186,14 +186,7 @@ export const Contact = () => {
 
         {/* Contact cards + map */}
         <div className="lg:col-span-5 flex flex-col gap-6">
-          <div ref={cardRef} className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-background/10">
-            <ContactBlock 
-              icon={<Phone size={16} />} 
-              label="Contact" 
-              value="+91 78006 46000" 
-              sub="Sales@equipetinternational.com" 
-              href="tel:+917800646000" 
-            />
+          <div ref={cardRef} className="grid grid-cols-1 gap-px bg-background/10">
             <ContactBlock 
               icon={<Phone size={16} />} 
               label="Contact" 

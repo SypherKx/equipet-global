@@ -1,29 +1,38 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { PawPrint } from "lucide-react";
 
 export const CustomCursor = () => {
-  const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isPointer, setIsPointer] = useState(false);
+  const cursorRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const updatePosition = (e: MouseEvent) => {
-      setPosition({ x: e.clientX, y: e.clientY });
+    // Check if device is mobile/touch
+    const isTouch = window.matchMedia("(pointer: coarse)").matches || window.innerWidth < 768;
+    if (isTouch) return;
+
+    const updateMousePos = (e: MouseEvent) => {
+      if (cursorRef.current) {
+        // Direct update for zero lag
+        cursorRef.current.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0) translate(-50%, -50%) scale(${isPointer ? 1.5 : 1})`;
+      }
       
       const target = e.target as HTMLElement;
       setIsPointer(window.getComputedStyle(target).cursor === "pointer");
     };
 
-    window.addEventListener("mousemove", updatePosition);
-    return () => window.removeEventListener("mousemove", updatePosition);
-  }, []);
+    window.addEventListener("mousemove", updateMousePos);
+
+    return () => {
+      window.removeEventListener("mousemove", updateMousePos);
+    };
+  }, [isPointer]);
 
   return (
     <div
-      className="fixed pointer-events-none z-[9999] transition-transform duration-200 ease-out mix-blend-difference"
+      ref={cursorRef}
+      className="fixed top-0 left-0 pointer-events-none z-[9999] mix-blend-difference will-change-transform hidden md:block"
       style={{
-        left: `${position.x}px`,
-        top: `${position.y}px`,
-        transform: `translate(-50%, -50%) scale(${isPointer ? 1.5 : 1})`,
+        transition: "transform 0.1s ease-out", // Very short transition only for the SCALE effect
       }}
     >
       <PawPrint 

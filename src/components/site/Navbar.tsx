@@ -5,6 +5,7 @@ const links = [
   { href: "#about", label: "About" },
   { href: "#products", label: "Products" },
   { href: "#gallery", label: "Gallery" },
+  { href: "/certifications", label: "Certifications" },
 ];
 
 export const Navbar = () => {
@@ -61,7 +62,7 @@ export const Navbar = () => {
         <nav className="hidden md:flex items-center gap-10">
           {links.map((l) => {
             const isHome = window.location.pathname === "/";
-            const targetHref = isHome ? l.href : `/${l.href}`;
+            const targetHref = l.href.startsWith("/") ? l.href : (isHome ? l.href : `/${l.href}`);
             return (
               <a
                 key={l.href}
@@ -115,7 +116,7 @@ export const Navbar = () => {
         <div className="container-premium py-8 flex flex-col gap-5 border-t border-foreground/10 mt-3">
           {links.map((l) => {
             const isHome = window.location.pathname === "/";
-            const targetHref = isHome ? l.href : `/${l.href}`;
+            const targetHref = l.href.startsWith("/") ? l.href : (isHome ? l.href : `/${l.href}`);
             return (
               <a
                 key={l.href}

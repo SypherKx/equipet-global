@@ -76,7 +76,7 @@ export const Products = () => {
             View All Products
           </Link>
           <a
-            href="/catalogue.pdf"
+            href="/Equipet-Brochure.pdf"
             download
             className="inline-flex items-center gap-3 bg-transparent text-background border border-background/20 px-8 py-4 text-[12px] uppercase tracking-[0.22em] font-medium hover:bg-background hover:text-foreground transition-all duration-300 w-full sm:w-auto justify-center"
           >

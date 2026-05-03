@@ -33,10 +33,13 @@ export const Gallery = () => {
   return (
     <section id="gallery" className="relative py-16 md:py-24 bg-background bg-paws">
       <div className="container-premium">
-        <div ref={headRef} className="max-w-2xl mb-16">
+        <div ref={headRef} className="max-w-4xl mb-16">
           <div className="eyebrow mb-5">Inside Our Manufacturing Excellence</div>
           <h2 className="heading-display text-foreground text-[clamp(2rem,5vw,3.75rem)] text-balance">
-            Where precision craftsmanship meets international quality standards  <em className="text-accent not-italic font-light"> built for consistency, hygiene, and scale.</em>
+            Where precision craftsmanship meets international quality standards
+            <span className="block mt-2">
+              <em className="text-accent not-italic font-light">built for consistency, hygiene, and scale.</em>
+            </span>
           </h2>
         </div>
 

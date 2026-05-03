@@ -89,7 +89,7 @@ export default function AllProducts() {
               All <em className="text-accent not-italic font-light">Products</em>
             </h1>
             <p className="text-background/50 mt-6 max-w-2xl mx-auto text-sm md:text-base leading-relaxed">
-              Explore our full range of 32 premium natural dog chew products. Available for global export.
+              Explore our full range of premium natural dog chew products. Available for global export.
             </p>
           </div>
 

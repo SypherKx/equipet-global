@@ -5,9 +5,9 @@ import { useEffect } from "react";
 
 const certifications = [
   { 
-    title: "ISO Certification", 
+    title: "CAPEXIL Certification", 
     src: "/certifications/certification-1.png", 
-    desc: "International standard for quality management systems." 
+    desc: "Chemical and Allied Products Export Promotion Council (CAPEXIL) membership." 
   },
   { 
     title: "HACCP Certification", 

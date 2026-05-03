@@ -23,6 +23,12 @@ export const Navbar = () => {
 
   // IntersectionObserver for active section highlighting
   useEffect(() => {
+    const isHome = window.location.pathname === "/";
+    if (!isHome) {
+      setActive(window.location.pathname);
+      return;
+    }
+
     const sectionIds = ["about", "products", "gallery", "contact"];
     const observers: IntersectionObserver[] = [];
 
@@ -63,22 +69,25 @@ export const Navbar = () => {
         <nav className="hidden md:flex items-center gap-10">
           {links.map((l) => {
             const isHome = window.location.pathname === "/";
-            const targetHref = l.label === "Home" 
-              ? (isHome ? "#top" : "/") 
-              : (l.href.startsWith("/") ? l.href : (isHome ? l.href : `/${l.href}`));
+            // Hide Home link if already on home page
+            if (l.label === "Home" && isHome) return null;
+            
+            const targetHref = l.href.startsWith("/") ? l.href : (isHome ? l.href : `/${l.href}`);
+            const isActive = active === l.href || active === targetHref;
+
             return (
               <a
                 key={l.href}
                 href={targetHref}
                 className={`underline-grow text-[12px] uppercase tracking-[0.22em] font-medium transition-colors duration-500 ${
                   scrolled
-                    ? active === l.href
+                    ? isActive
                       ? "text-foreground"
                       : "text-foreground/60 hover:text-foreground"
-                    : active === l.href
+                    : isActive
                     ? "text-background"
                     : "text-background/70 hover:text-background"
-                } ${active === l.href ? "is-active" : ""}`}
+                } ${isActive ? "is-active" : ""}`}
               >
                 {l.label}
               </a>
@@ -119,9 +128,11 @@ export const Navbar = () => {
         <div className="container-premium py-8 flex flex-col gap-5 border-t border-foreground/10 mt-3">
           {links.map((l) => {
             const isHome = window.location.pathname === "/";
-            const targetHref = l.label === "Home" 
-              ? (isHome ? "#top" : "/") 
-              : (l.href.startsWith("/") ? l.href : (isHome ? l.href : `/${l.href}`));
+            // Hide Home link if already on home page
+            if (l.label === "Home" && isHome) return null;
+
+            const targetHref = l.href.startsWith("/") ? l.href : (isHome ? l.href : `/${l.href}`);
+            const isActive = active === l.href || active === targetHref;
 
             return (
               <a
@@ -129,7 +140,7 @@ export const Navbar = () => {
                 href={targetHref}
                 onClick={() => setOpen(false)}
                 className={`text-sm uppercase tracking-[0.22em] py-2 border-b border-foreground/5 ${
-                  active === l.href ? "text-accent font-medium" : "text-foreground/80 hover:text-foreground"
+                  isActive ? "text-accent font-medium is-active" : "text-foreground/80 hover:text-foreground"
                 }`}
               >
                 {l.label}

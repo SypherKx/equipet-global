@@ -63,10 +63,9 @@ export const Navbar = () => {
         <nav className="hidden md:flex items-center gap-10">
           {links.map((l) => {
             const isHome = window.location.pathname === "/";
-            // Hide Home link if already on home page
-            if (l.label === "Home" && isHome) return null;
-            
-            const targetHref = l.href.startsWith("/") ? l.href : (isHome ? l.href : `/${l.href}`);
+            const targetHref = l.label === "Home" 
+              ? (isHome ? "#top" : "/") 
+              : (l.href.startsWith("/") ? l.href : (isHome ? l.href : `/${l.href}`));
             return (
               <a
                 key={l.href}
@@ -120,10 +119,10 @@ export const Navbar = () => {
         <div className="container-premium py-8 flex flex-col gap-5 border-t border-foreground/10 mt-3">
           {links.map((l) => {
             const isHome = window.location.pathname === "/";
-            // Hide Home link if already on home page
-            if (l.label === "Home" && isHome) return null;
+            const targetHref = l.label === "Home" 
+              ? (isHome ? "#top" : "/") 
+              : (l.href.startsWith("/") ? l.href : (isHome ? l.href : `/${l.href}`));
 
-            const targetHref = l.href.startsWith("/") ? l.href : (isHome ? l.href : `/${l.href}`);
             return (
               <a
                 key={l.href}
